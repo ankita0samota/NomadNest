@@ -1,0 +1,165 @@
+/* src/pages/Details.css */
+
+.details-page {
+  background: #fdfdfd;
+  min-height: 100vh;
+}
+
+.details-banner {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.details-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 80px;
+  color: white;
+}
+
+.details-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.details-badge {
+  background: #ff8c00;
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.details-content {
+  max-width: 900px;
+  margin: -60px auto 60px auto;
+  background: white;
+  border-radius: 30px;
+  position: relative;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.details-meta {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.details-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-info-section {
+  margin-bottom: 40px;
+}
+
+.details-info-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.details-info-section p {
+  line-height: 1.8;
+  color: #555;
+  font-size: 17px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.info-list li {
+  padding: 12px 20px;
+  background: #fff8f0;
+  border-radius: 12px;
+  color: #ff8c00;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-container {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.back-btn {
+  padding: 12px 25px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #000;
+}
+
+.action-btn {
+  padding: 12px 25px;
+  background: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .details-banner {
+    height: 300px;
+  }
+  .details-overlay {
+    padding: 20px;
+  }
+  .details-overlay h1 {
+    font-size: 32px;
+  }
+  .details-content {
+    margin: -30px 20px 40px 20px;
+    padding: 30px;
+  }
+  .details-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
